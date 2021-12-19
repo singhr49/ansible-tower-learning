@@ -7,6 +7,6 @@
   tasks:
     - name: Creating a group
       ansible.builtin.group:
-        name: {{mygroup}}
+        name: "{{ mygroup }}"
         state: present
 
