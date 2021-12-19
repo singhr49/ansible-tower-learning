@@ -1,0 +1,6 @@
+all:
+  hosts:
+    sunil-ansible-tower.sunil.local
+    sunil-managednode0.sunil.local
+    sunil-managednode1.sunil.local
+    sunil-managednode2.sunil.local
