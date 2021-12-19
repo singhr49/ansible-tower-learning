@@ -1,0 +1,15 @@
+---
+- name: Adding a user to group
+  hosts: all
+  become: true
+  vars:
+    myuser: "example"
+    mygroups:
+      - adm
+      - sys
+  tasks:
+    - name: Adding a user to groups
+      ansible.builtin.user:
+        name: "{{ myuser }}"
+        groups: "{{mygroups}}"
+        append: true
