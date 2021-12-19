@@ -1,0 +1,17 @@
+---
+- name: Creating a user
+  hosts: all
+  become: true
+  vars:
+    myuser: " example"
+    mygroups:
+      - example
+    tasks:
+      - name: Adding a user to secondary group
+        ansible.builtin.user:
+          name: "{{ myuser }}"
+          groups: "{{ mygroups }}"
+          append: true
+        loop:
+          - user-sunil
+          - user-anil
