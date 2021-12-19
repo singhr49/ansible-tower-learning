@@ -3,7 +3,7 @@
   hosts: all
   become: true
   vars:
-    myuser: " example"
+    myuser: "example"
     tasks:
       - name: Creating a user
         ansible.builtin.user:
