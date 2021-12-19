@@ -1,0 +1,12 @@
+---
+- name: Creating a Group
+  hosts: all
+  become: true
+  vars:
+    mygroup: "example"
+  tasks:
+    - name: Creating a group
+      ansible.builtin.group:
+        name: {{mygroup}}
+        state: present
+
