@@ -12,6 +12,3 @@
           name: "{{ myuser }}"
           groups: "{{ mygroups }}"
           append: true
-        loop:
-          - user-sunil
-          - user-anil
