@@ -1,12 +1,12 @@
 ---
-- name: Fetching files from remote host to local
+- name: Fetching files from remote host to local (here it means controller node)
   hosts: all
   become: true
   vars:
     log_file: "/var/log/messages"
     dest_dir: "/opt/logs/"
   tasks:
-    - name: Fetching messages log from remote host to local
+    - name: Fetching messages log from remote host to local (here it means controller node)
       ansible.builtin.fetch:
         src: "{{ log_file }}"
         dest: "{{ dest_dir }}"
