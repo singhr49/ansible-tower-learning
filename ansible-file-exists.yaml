@@ -12,7 +12,7 @@
     - name: report file exist
       ansible.builtin.debug:
         msg: "file {{ file_name }} exist"
-      when: file_data.stat.exist
+      when: file_data.stat.exists
     - name: report file exists
       ansible.builtin.debug:
         msg: "file {{ file_name }} does not exist"
