@@ -185,7 +185,7 @@ pg_password='redhat'
     
     MANAGED NODES 100 EXPIRES 1 Feb 2022 10:29
 
-Login using user 'admin' and password 'redhat'
+Login using user 'admin' and password '<<password>>'
 
 ![ScreenShot](images/login.png)
 
