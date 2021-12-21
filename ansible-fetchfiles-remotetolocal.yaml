@@ -11,4 +11,3 @@
         src: "{{ log_file }}"
         dest: "{{ dest_dir }}"
         fail_on_missing: true
-        flat: true
