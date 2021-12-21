@@ -4,7 +4,7 @@
   become: true
   vars:
     log_file: "/var/log/messages"
-    dest_dir: "/var/tmp/{{ invnetory_hostname }}/messages"
+    dest_dir: "/var/tmp/{{ inventory_hostname }}-messages"
   tasks:
     - name: Fetching messages log from remote host to local
       ansible.builtin.fetch:
