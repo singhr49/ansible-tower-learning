@@ -1,0 +1,11 @@
+---
+- name: Blockinfile module demo
+  hosts: all
+  become: true
+  tasks:
+    - name: Adding a line to /etc/hosts file
+      ansible.builtin.blockinfile:
+        state: present
+        dest: /etc/hosts
+        content: |
+                  10.71.107.120 demo demo.example.com
