@@ -10,5 +10,5 @@
     - name: Restart the sevrice on remote host
       ansible.builtin.service:
         name: httpd
-        state: stopped
+        state: started
         enabled: true
