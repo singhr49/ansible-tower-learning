@@ -15,5 +15,5 @@
       when: file_data.stat.exist
     - name: report file exists
       ansible.builtin.debug:
-        msg: "file {{ file_name }} does not exist
+        msg: "file {{ file_name }} does not exist"
       when: not file_data.stat.exists
