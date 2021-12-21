@@ -1,0 +1,21 @@
+---
+- name: Extract tar or zip file
+  hosts: all
+  become: false
+  vars:
+    tarfile_path: "https://github.com/lucab85/ansible-pilot/archive/refs/heads/master.zip"
+  tasks:
+    - name: Check extractor is present
+      ansible.builtin.yum:
+        - name:
+            - unzip
+            - tar
+          state: present
+      become: true
+    - name: Extract the archive file
+      ansible.builtin.unarchive:
+        src: "{{ tarfile_path }}"
+        dest: "/root/example/"
+        remote_src: true
+        validate_certs: true
+
