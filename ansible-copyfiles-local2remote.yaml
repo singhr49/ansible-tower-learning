@@ -1,0 +1,11 @@
+---
+- name: Copy files from local to remote host
+  hosts: all
+  become: false
+  tasks:
+    - name: Copying the file sample.txt from local to remote
+      ansible.builtin.copy:
+        src: inputfiles/sample.txt
+        dest: /root/example/sample.txt
+        owner: example
+        mode: "0644"
