@@ -1,0 +1,13 @@
+---
+- name: Checkout the repo from git
+  hosts: all
+  become: true
+  tasks:
+    - name: Checking whether the git is installed
+      ansible.builtin.yum:
+        name: git
+        state: present
+    - name: Checking out the springboot sample repo
+      ansible.builtin.git:
+        repo: https://github.com/ksunilkumar007/springbootwebapp.git
+        dest: /root/springboot-webapp
