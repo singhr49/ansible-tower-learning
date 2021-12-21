@@ -1,7 +1,6 @@
 ---
 - name: Print variable values
   hosts: all
-  become: false
   vars:
     fruit: "apple"
   tasks:
