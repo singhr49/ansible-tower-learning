@@ -8,5 +8,5 @@
   tasks:
     - name: Fetching messages log from remote host to local
       ansible.builtin.fetch:
-        src: {{ log_file }}
-        dest: {{ dest_dir }}
+        src: "{{ log_file }}"
+        dest: "{{ dest_dir }}"
