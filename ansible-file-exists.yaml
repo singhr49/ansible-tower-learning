@@ -3,7 +3,7 @@
   hosts: all
   become: false
   vars:
-    file_name: /root/example/sample.txt
+    file_name: "/root/example/sample.txt"
   tasks:
     - name: Checking the file exist
       ansible.builtin.stat:
