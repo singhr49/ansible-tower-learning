@@ -4,12 +4,13 @@
   become: false
   vars:
     directory: "/tmp"
-tasks:
+  tasks:
     - name: Check if directory exists
       ansible.builtin.stat:
         path: "{{ directory }}"
       register: dir_to_check
-- name: Directory found
+
+    - name: Directory found
       ansible.builtin.debug:
         msg: "Directory {{directory}} is present"
       when: dir_to_check.stat.isdir is defined and dir_to_check.stat.isdir
