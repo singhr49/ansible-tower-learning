@@ -1,0 +1,14 @@
+---
+- name: Start Restart Stop httpd services on remote host
+  hosts: all
+  become: true
+  tasks:
+    - name: Checking whether the httpd is installed
+      ansible.builtin.yum:
+        name: httpd
+        state: present
+    - name: Restart the sevrice on remote host
+      ansible.builtin.service:
+        name: httpd
+        state: stopped
+        enabled: true
