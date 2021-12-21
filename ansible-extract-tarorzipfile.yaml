@@ -7,10 +7,10 @@
   tasks:
     - name: Check extractor is present
       ansible.builtin.yum:
-        - name:
-            - unzip
-            - tar
-          state: present
+        name:
+          - unzip
+          - tar
+        state: present
       become: true
     - name: Extract the archive file
       ansible.builtin.unarchive:
