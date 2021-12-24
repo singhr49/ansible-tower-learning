@@ -3,7 +3,7 @@
   hosts: all
   become: false
   vars:
-    myfile: /root/example/sample.txt
+    myfile: /root/example/sample.txt.bkp
   tasks:
     - name: Delete the file or directory
       ansible.builtin.file:
