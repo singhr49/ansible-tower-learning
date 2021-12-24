@@ -1,0 +1,11 @@
+---
+- name: Create a empty file
+  hosts: all
+  become: true
+  vars:
+    myfile: "/root/example/test.txt"
+  tasks:
+    - name: Create a empty file
+      file:
+        path: "{{ myfile }}"
+        state: touch
