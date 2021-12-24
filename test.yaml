@@ -1,0 +1,10 @@
+---
+- name: "Testing"
+  hosts: all
+  become: false
+  vars:
+    var1: "xxx"
+    var2: "yy1"
+  tasks:
+    - name: "testing"
+      

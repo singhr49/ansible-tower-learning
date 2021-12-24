@@ -1,0 +1,11 @@
+---
+- name: Delete file or directory
+  hosts: all
+  become: false
+  vars:
+    myfile: /root/example/sample.txt
+  tasks:
+    - name: Delete the file or directory
+      ansible.builtin.file:
+        path: "{{ myfile }}"
+        state: absent
