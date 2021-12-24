@@ -4,7 +4,7 @@
   become: true
   vars:
     myrepo: "git@github.com:ksunilkumar007/HospitalSystem.git"
-    dest: "/root/example/"
+    dest: "/root/hospitalsystem/"
     sshkey: "~/.ssh/id_rsa"
   tasks:
     - name: Check whether git is installed
