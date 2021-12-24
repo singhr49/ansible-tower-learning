@@ -1,0 +1,20 @@
+---
+- name: Git SSH Checkout
+  hosts: all
+  become: true
+  vars:
+    myrepo: "git@github.com:ksunilkumar007/HospitalSystem.git"
+    dest: "/root/example/"
+    sshkey: "~/.ssh/id_rsa"
+  tasks:
+    - name: Check whether git is installed
+      yum:
+        name: git
+        state: present
+        update_cache: true
+      become: true
+    - name: Checkout the repo
+      git:
+        repo: "{{ myrepo }}"
+        dest: "{{ dest }}"
+        key_file: "{{ sshkey }}"
